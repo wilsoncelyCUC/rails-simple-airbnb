@@ -1,0 +1,13 @@
+<% @flats.each do |flat| %>
+    <h2><%= flat.name %></h2>
+    <p><%= flat.address %></p>
+    <p><%= flat.price_per_night %></p>
+    <p><%= flat.number_of_guests %></p>
+
+
+    <p><%=link_to 'More info', flat_path(flat) %></p>
+    <p><%=link_to 'Edit', edit_flat_path(flat) %></p>
+    <p><%=link_to 'Remove', flat_path(flat), method: :delete%></p>
+
+
+<% end %>
